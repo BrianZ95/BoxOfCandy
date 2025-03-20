@@ -9,6 +9,7 @@ public class Candy {
         return flavor;
     }
     public String getFlavor() {
+        return flavor;
         /* implementation not shown */ }
 
     // There may be instance variables, constructors, and methods that are not

@@ -36,7 +36,8 @@ public class BoxOfCandy
                 return true;
             }
             return false;
-        } 
+        }
+        return false; 
     /**
     * Removes from box and returns a piece of candy with flavor specified by the parameter, or
     * returns null if no such piece is found, as described in part (b)
@@ -44,7 +45,20 @@ public class BoxOfCandy
     }
 
     public Candy removeNextByFlavor(String flavor)
-    { /* to be implemented in part (b) */ }
-
+    { /* to be implemented in part (b) */ 
+        for(int row = box.length-1; row>=0; row--){
+            for(int col = 0; col< box[0].length; col++)
+            {
+                Candy c = box[row][col];
+                if(c != null && c.getFlavor().equals(flavor))
+                {
+                    box[row][col]= null;
+                    return c;
+                }
+                
+            }
+        }
+        return null;
     // There may be instance variables, constructors, and methods that are not shown.
+    }
 }
