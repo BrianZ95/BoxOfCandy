@@ -1,16 +1,6 @@
-public class Main{
-    public static void main(String[] args)
-    {
-        Candy[][] box = new Candy[4][3];
-        box[0][1]= new Candy("lime");
-        box[1][1]= new Candy("orange");
-        box[2][2]= new Candy("cherry");
-        box[3][1]= new Candy("lemon");
-        box[3][2]= new Candy("grape");
-        
-        BoxOfCandy b = new BoxOfCandy(box);
-
-        box= new Candy[3][5];
+public class Main {
+    public static void main(String[] args){
+        Candy[][] box = new Candy[3][5];
         box[0][0] = new Candy("lime");
         box[0][1] = new Candy("lime");
         box[0][3] = new Candy("lemon");
@@ -21,9 +11,11 @@ public class Main{
         box[2][2] = new Candy("lemon");
         box[0][4] = new Candy("orange");
 
-        System.out.println("Test");
+
+        BoxOfCandy b = new BoxOfCandy(box);
         System.out.println(b);
-        System.out.println(b.removeNextByFlavor("cherry"));
+        b.removeNextByFlavor("cherry");
         System.out.println(b);
+        
     }
 }
